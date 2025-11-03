@@ -40,3 +40,9 @@ imhist(J, 64)                     % Histogram after equalization
 [J, T] = histeq(I);               % Also return the mapping T (CDF-based transform)
 figure
 plot((0:255)/255, T);             % Plot input→output intensity mapping in [0,1]
+
+%% adaptive hist
+I = imread('tire.tif');
+J = adapthisteq(I,'clipLimit',0.02,'Distribution','rayleigh');
+imshowpair(I,J,'montage');
+title('Original Image (left) and Contrast Enhanced Image (right)')
