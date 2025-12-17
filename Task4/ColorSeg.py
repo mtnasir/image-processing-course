@@ -29,7 +29,7 @@ B = frame_rgb[:, :, 2]
 # ========== 3. Threshold for RED in RGB ==========
 # Condition: R is high, G and B are relatively low.
 # You can adjust these thresholds based on your image.
-red_mask = (R > 120) & (G < 80) & (B < 80)
+red_mask = (R > 100) & (G < 60) & (B < 60)
 
 # Convert boolean mask to uint8 (0 or 255)
 red_mask = red_mask.astype(np.uint8) * 255
