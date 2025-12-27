@@ -4,10 +4,7 @@ import matplotlib.pyplot as plt
 import os
 
 class ImageSegmentationOpenCV:
-    """
-    Image Segmentation and Line Detection using OpenCV only
-    No scikit-image dependency required
-    """
+ 
     def __init__(self):
         pass
     
