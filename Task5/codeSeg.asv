@@ -1,0 +1,23 @@
+clear
+close all
+img=imread("cameraman.tif");
+
+imgg=im2gray(img);
+
+imedg1=edge(img,"sobel");
+
+imshowpair(img,imedg1,'montage')
+title("Sobel edge detection")
+
+figure
+imedg2=edge(img,'canny'.'',0.2);
+imshowpair(img,imedg2,'montage')
+title("Canny edge detection")
+
+%% Thresholding
+
+imgg=im2gray(img);
+
+imgTh=imgg>150;
+imshowpair(img,imgTh,'montage')
+
